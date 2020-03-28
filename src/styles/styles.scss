@@ -1,3 +1,179 @@
-body{
-    background-color: pink;
+
+// fonts
+$font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+//colors 
+$white: #fff;
+$black: #000;
+$maroon: #83333e;
+$off-white: #f2f4f5;
+
+html, body {
+    font-family: $font;
+    font-size: 16px;
+};
+
+.container {
+    width: 1640px;
+    min-width: 1640px;
+    margin: 0 auto;
+    @media (max-width: 1440px) {
+        width: 1280px;
+        min-width: 1280px;
+    }
+    @media (max-width: 1280px) {
+        width: 976px;
+        min-width: 976px;
+    }
+    @media (max-width: 976px) {
+        width: 768px;
+        min-width: 7680px;
+    }
+}
+
+////HEADER////
+
+header{
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    .innerHeader{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        .logo{
+            a{
+                font-weight: 700;
+                text-decoration: none;
+                letter-spacing: 1.5px;
+                color: $black;
+            }
+        }
+        .navigation{
+            nav{
+               a{
+                    margin: 0 20px;
+                    text-decoration: none;
+                    letter-spacing: 1.75;
+                    text-transform: upperCase;
+                    font-size: 0.75rem;
+                    color:$black;
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+               } 
+            }
+        }
+    }
+}
+
+////BANNER/////
+.banner{
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    position: relative;
+    height: 100vh;
+    .row{
+        position: relative;
+        .mainText{
+            font-size: 5.8rem;
+            text-transform: uppercase;
+            letter-spacing: 42px;
+            font-weight: 700;
+            color: $white;
+            position:absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            mix-blend-mode: difference;
+            z-index: 9;
+            @media (max-width: 1440px) {
+                font-size: 4.4rem;
+                letter-spacing: 36px;
+            }
+            @media (max-width: 1280px) {
+                width: 976px;
+                min-width: 976px;
+            }
+            @media (max-width: 976px) {
+                width: 768px;
+                min-width: 768px;
+            }
+        }
+        .mainImage{
+            width: 636px;
+            margin: 0 auto;
+            @media (max-width: 1440px) {
+                width: 436px;
+            }
+            @media (max-width: 1280px) {
+                width: 476px;
+                min-width:476px;
+            }
+            @media (max-width: 976px) {
+                width: 168px;
+                min-width: 168px;
+            }
+        }
+
+        .sideImage{
+            width:260px;
+            position: absolute;
+            @media (max-width: 1440px) {
+                width: 208px;
+            }
+            @media (max-width: 1280px) {
+                width: 166px;
+                
+            }
+            @media (max-width: 976px) {
+                width: 68px;
+                
+            }
+            &.left{
+                left: 168px;
+                top: 70px;
+                @media (max-width: 1440px) {
+                    left: 128px;
+                }
+                @media (max-width: 1280px) {
+                    left: 50px;
+                }
+                @media (max-width: 976px) {
+                    left: 58px;
+                }
+            }
+            &.right{
+                right: 168px;
+                bottom: 40px;
+                @media (max-width: 1440px) {
+                    right: 128px;
+                }
+                @media (max-width: 1280px) {
+                    right: 10px;
+                }
+                @media (max-width: 976px) {
+                    right: 58px;
+                    
+                }
+                
+            }
+        }
+    }
+    .scroll{
+       font-weight: 700;
+       font-size:0.875rem; 
+       text-decoration: none;
+       letter-spacing: 2.5px;
+       color:$black;
+       text-transform: uppercase;
+       position: absolute;
+       bottom: 48px;
+    }
 }
