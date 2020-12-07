@@ -11,6 +11,8 @@ $off-white: #f2f4f5;
 html, body {
     font-family: $font;
     font-size: 16px;
+    padding: 0;
+    margin: 0;
 };
 
 .container {
@@ -91,7 +93,8 @@ header{
             top: 50%;
             transform: translateY(-50%);
             text-align: center;
-            mix-blend-mode: difference;
+            background-color: rgb(42 17 62 / 42%);
+            // mix-blend-mode: difference;
             z-index: 9;
             @media (max-width: 1440px) {
                 font-size: 4.4rem;
@@ -175,5 +178,104 @@ header{
        text-transform: uppercase;
        position: absolute;
        bottom: 48px;
+    }
+    // .fixed-misc{
+    //     position: fixed;
+    //     top: 50%;
+    //     right: -48px;
+    //     transform: rotate(-90degrees);
+    // }
+}
+
+/// About blurb 
+
+.about-blurb{
+    padding: 48px 0 ;
+    background-color: rgba(253, 238, 209, 0.89);
+    position: relative;
+
+    .inner-blurb{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content{
+            width: 33%;
+            @media(max-width: 1440px){
+                width: 40%;
+            }
+            h3{
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1.8rem;
+                letter-spacing: 1.5px;
+                margin: 0;
+
+            }
+            p{
+                font-size: 1rem;
+                line-height: 2rem;
+                font-weight: 300;
+                margin: 40px 0 72px;
+
+            }
+            .btn-row{
+                a{
+                    font-weight: 700;
+                    font-size: 0.875rem;
+                    letter-spacing: 1.5px;
+                    color: $black;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
+        }
+        .images{
+            width: 50%;
+            height: 1000px;
+            position: relative;
+            z-index: 7;
+            @media (max-width: 1440px){
+                height: 800px ;
+            }
+            .top-right{
+                position: absolute;
+                width: 460px;
+                top: 90px;
+                right: 0;
+                z-index: 4;
+                @media (max-width: 1440px){
+                    width: 360px ;
+                }
+            }
+            .bottom-left{
+                position: absolute;
+                width: 410px;
+                left: 0px;
+                bottom: 50px;
+                @media (max-width: 1440px){
+                    width: 310px ;
+                }
+            }
+        }
+    }
+    .black-box{
+        background-color: black;
+        height: 418px;
+        width: 836px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+       
+        &.overlay{
+            z-index: 7;
+            background: rgba(255, 187, 0, 0.335);
+            mix-blend-mode: overlay;
+            @media (max-width: 1440px){
+                width: 636px ;
+                height: 340px;
+            }
+        }
     }
 }
