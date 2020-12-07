@@ -93,8 +93,7 @@ header{
             top: 50%;
             transform: translateY(-50%);
             text-align: center;
-            background-color: rgb(42 17 62 / 42%);
-            // mix-blend-mode: difference;
+             mix-blend-mode: difference;
             z-index: 9;
             @media (max-width: 1440px) {
                 font-size: 4.4rem;
